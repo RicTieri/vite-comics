@@ -1,7 +1,9 @@
 <template lang="">
-  <div>
-    main
-  </div>
+  <main>
+    <div>
+      &RightArrow; Content goes here &LeftArrow;  
+    </div>
+  </main>
 </template>
 
 <script>
