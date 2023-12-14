@@ -1,11 +1,12 @@
 @use './partials/variables' as *;
 @use './partials/mixins' as *;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;600;700&display=swap');
 
 *{
     @include reset;
 }
 
 body{
-    
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
