@@ -1,8 +1,8 @@
 <template lang="">
   <main>
-    <div>
+    <section>
       &RightArrow; Content goes here &LeftArrow;  
-    </div>
+    </section>
   </main>
 </template>
 
@@ -19,4 +19,17 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
+
+main {
+  color: $white;
+  background-color: $main-bg;
+  padding: 5rem 0;
+
+  section {
+    width: $base-width;
+    margin: 0 auto;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
 </style>

@@ -115,8 +115,6 @@ nav {
 
       a {
         text-transform: uppercase;
-        text-decoration: none;
-        color: $black;
 
         &.active {
           color: $accent-color;
