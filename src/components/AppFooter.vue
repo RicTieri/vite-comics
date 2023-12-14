@@ -31,12 +31,14 @@
     </section>
     <section class="down-footer">
       <div class="wrapper">
-         <button>sign up now!</button>
+         <button class="btn-bordered">sign-up now!</button>
           <nav>
             <button>follow us</button>
             <ul>
-              <li>
-                <img :src="getImageUrl(path)" alt="">
+              <li v-for="social in socialsLink">
+                <a :href="social.link">
+                  <img :src="getImageUrl(social.path)" :alt="social.name">
+                </a>
               </li>
             </ul>
           </nav>
@@ -50,7 +52,6 @@ export default {
   name: 'AppFooter',
   data() {
     return {
-      path: 'footer-facebook.png',
       pageLinks: [
         {
           title: 'dc comics',
@@ -170,11 +171,32 @@ export default {
           }
         ]
       },
-      socialsLink[
+      socialsLink:[
         {
+          name: 'facebook',
           path: 'footer-facebook.png',
           link: '#'
-        }
+        },
+        {
+          name: 'twitter',
+          path: 'footer-twitter.png',
+          link: '#'
+        },
+        {
+          name: 'youtube',
+          path: 'footer-youtube.png',
+          link: '#'
+        },
+        {
+          name: 'pinterest',
+          path: 'footer-pinterest.png',
+          link: '#'
+        },
+        {
+          name: 'periscope',
+          path: 'footer-periscope.png',
+          link: '#'
+        },
       ]
     }
   },
@@ -250,6 +272,41 @@ footer {
 }
 
 .down-footer {
+  padding: 2rem 0;
   background-color: $footer-bg;
+
+  .wrapper{
+    justify-content: space-between;
+
+    button{
+      text-transform: uppercase;
+      background: transparent;
+      border: none;
+      font-weight: 600;
+    }
+    .btn-bordered{
+      color: $white;
+      padding: .5rem 1rem;
+      border: 2px solid $accent-color;
+    }
+  
+    nav{
+      @include flex(row, flex-end, center);
+      
+      button{
+        font-size: 1.1rem;
+        color: $accent-color;
+      }
+
+      ul{
+        @include flex(row, flex-end, center);
+        list-style: none;
+
+        li{
+          margin-left: 1.5rem;
+        }
+      }
+    }
+  }
 }
 </style>
