@@ -4,9 +4,12 @@
       &RightArrow; Content goes here &LeftArrow;  
     </section>
   </main>
+  <AppBanner/>
 </template>
 
 <script>
+import AppBanner from './AppBanner.vue';
+
 export default {
   name: 'AppMain',
   data() {
@@ -14,6 +17,9 @@ export default {
 
     }
   },
+  components:{
+    AppBanner
+  }
 }
 </script>
 <style lang="scss" scoped>
