@@ -11,8 +11,12 @@
       </ul>
     </nav>
   </header>
+  <AppJumbo/>
 </template>
+
 <script>
+import AppJumbo from './AppJumbo.vue';
+
 export default {
   name: 'AppHeader',
   data() {
@@ -71,6 +75,9 @@ export default {
       ],
     }
   },
+  components:{
+    AppJumbo,
+  }
 }
 </script>
 <style lang="scss" scoped>

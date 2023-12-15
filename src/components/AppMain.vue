@@ -1,14 +1,18 @@
 <template lang="">
   <main>
-    <section>
-      &RightArrow; Content goes here &LeftArrow;  
-    </section>
+    <div class="wrapper">
+      <div class="section-title">
+        current series
+      </div>
+      <AppCurrent/>
+    </div>
   </main>
   <AppBanner/>
 </template>
 
 <script>
 import AppBanner from './AppBanner.vue';
+import AppCurrent from './AppCurrent.vue';
 
 export default {
   name: 'AppMain',
@@ -18,7 +22,8 @@ export default {
     }
   },
   components:{
-    AppBanner
+    AppBanner,
+    AppCurrent
   }
 }
 </script>
@@ -29,13 +34,23 @@ export default {
 main {
   color: $white;
   background-color: $main-bg;
-  padding: 5rem 0;
-
-  section {
+  
+  .wrapper {
     width: $base-width;
+    position: relative;
+    padding: 5rem 0;
     margin: 0 auto;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
+    .section-title{
+      position: absolute;
+      text-transform: uppercase;
+      background-color: $accent-color;
+      top: -20px;
+      left: 0;
+      padding: .25rem 1rem;
+    }
+    
   }
 }
 </style>
